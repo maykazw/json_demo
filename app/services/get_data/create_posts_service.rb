@@ -8,8 +8,8 @@ module GetData
         ActiveRecord::Base.transaction do
           posts_data.each do |post_data|
             begin
-            post_data = Post.find_or_create_by!(external_uuid: post_data[:id]) do |post|
-              post.name = post_data[:name]
+            Post.find_or_create_by!(external_uuid: post_data[:id]) do |post|
+              post.name = post_data[:title]
               post.body = post_data[:body]
               post.user_id = post_data[:userId]
             end

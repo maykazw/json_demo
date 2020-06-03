@@ -1,13 +1,11 @@
 class ShowController < ApplicationController
   def index
-    @get_data = ShowService.call()
+    @get_data = ShowPostsService.call()
     respond_to do |format|
       format.html
-      format.json { render json: @get_data,serializer: PostSerializer }
+      format.json { render json: @get_data, each_serializer: PostSerializer }
     end
   end
-
-
 
   def comments
     @comments = GetCommentsService.call(params_comments)

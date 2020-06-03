@@ -1,4 +1,4 @@
-class ShowService < BaseService
+class ShowPostsService < BaseService
     def initialize(args)
     end
 
@@ -6,7 +6,6 @@ class ShowService < BaseService
         return Post.all
     end
 
-    private
-
-    attr_accessor :url, :params_url
+    # private
+    # attr_accessor
 end

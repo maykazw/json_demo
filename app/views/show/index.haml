@@ -1,4 +1,7 @@
 .row
   .col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
     %h1.text-center POSTS
-    = render 'post_table', posts: @get_data
+    -if @get_data.any?
+      = render 'post_table', posts: @get_data
+    -else
+      =link_to "download data", get_data_index_path
