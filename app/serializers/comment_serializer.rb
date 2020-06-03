@@ -9,7 +9,6 @@
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
-class PostSerializer < ActiveModel::Serializer
+class CommentSerializer < ActiveModel::Serializer
   attributes :id, :name,:external_uuid,:body
-  has_many :comments, serializer: CommentSerializer
 end

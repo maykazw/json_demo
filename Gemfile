@@ -25,7 +25,6 @@ gem 'active_model_serializers'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem 'rest-client'
 gem 'annotate'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -34,6 +33,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+gem "haml-rails"
+gem "bootstrap-sass"
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

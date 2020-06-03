@@ -1,0 +1,11 @@
+%table.table.table-striped
+  %tbody
+    - posts.each_with_index do |post, i|
+      %tr
+        %td= i + 1
+        %td
+          %h4= post.name
+        %td
+          %p= post.body
+        %td= post.user
+        %td= link_to "show comments", comments_path(post.id)

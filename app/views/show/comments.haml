@@ -1,0 +1,10 @@
+%h1 Comments
+%table.table.table-striped
+  - @comments.each_with_index do |comment,i|
+    %tr
+      %td
+        %p= i + 1
+      %td
+        %h4= comment.name
+      %td= comment.email
+      %td= comment.body
